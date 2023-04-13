@@ -91,6 +91,7 @@ revealFooterLink();
 generateTable();
 addRow();
 hideAllImages();
+changeColorWithRandom();
  // document.removeEventListener('click', action);
 }
 
@@ -172,7 +173,10 @@ hideAllImages();
 
     const paintItGreen = function () {
 
-        document.querySelectorAll("ul").forEach = element => element.style.backgroundColor = "green";
+        var lista = document.querySelectorAll("ul");
+        for(var e of lista){
+          e.style.backgroundColor = "green";
+        }
     }
 
     /* ESERCIZIO 9
@@ -254,6 +258,10 @@ hideAllImages();
           let nome = document.createElement("td");
           let qnt = document.createElement("td");
           let price = document.createElement("td");
+          nome.setAttribute("width", "200px");
+          qnt.setAttribute("width", "200px");
+          price.setAttribute("width", "200px");
+          first.setAttribute("width", "200px");
           first.appendChild(img);
           row.appendChild(first);
           row.appendChild(nome);
@@ -301,7 +309,8 @@ hideAllImages();
     */
 
     const changeColorWithRandom = function () {
-
+      var element = document.querySelector("h2")
+      element.onclick = element => element.style.color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 
     }
 
@@ -311,7 +320,7 @@ hideAllImages();
 
     const deleteVowels = function () {
 
-
+        
     }
 
   </script>

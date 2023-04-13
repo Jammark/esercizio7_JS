@@ -309,8 +309,8 @@ changeColorWithRandom();
     */
 
     const changeColorWithRandom = function () {
-      var element = document.querySelector("h2")
-      element.onclick = element => element.style.color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+      var element = document.querySelector("h2");
+      element.onclick = () => element.style.color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 
     }
 
@@ -320,7 +320,7 @@ changeColorWithRandom();
 
     const deleteVowels = function () {
 
-        
+
     }
 
   </script>
